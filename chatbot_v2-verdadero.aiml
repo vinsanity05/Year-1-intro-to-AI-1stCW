@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+    <pattern>^ Where is * ^</pattern>
+    <template><think><set name="location"><star index = "2"/></set></think>
+    <condition name="location">
+    <li value="Bristol">In the South-West of England</li>
+    <li value="London">Somewhere east of Bristol</li>
+    <li value="Cardiff">In Wales</li>
+    <li value="UWE">In north Bristol</li>
+    <li value="beauty">In the eye of the beholder</li>
+    <li value="Bot">I do not have an answer for that</li>
+    <li value="Keynsham"> I do not know where Keynsham is</li>
+</condition></template>
+    </category> 
+
+<category>
+    <pattern>^ Whereabouts is * ^</pattern>
+    <template><think><set name="location2"><star index = "2"/></set></think>
+    <condition name="location2">
+    <li value="Bristol">In the South-West of England</li>
+    <li value="London">Somewhere east of Bristol
+</li>
+    <li value="Cardiff">In Wales</li>
+    <li value="beauty">In the eye of the beholder</li>
+    </condition></template>
+    </category> 
+
+<category>
+    <pattern>^ Tell me where * ^</pattern>
+    <template><think><set name="location3"><star index = "2"/></set></think>
+    <condition name="location3">
+    <li value="Bristol"> In the South-West of England</li>
+    <li value="Cardiff">In Wales</li>
+  <li value="UWE">In north Bristol</li>
+   <li value="London">Somewhere east of Bristol</li>
+ <li value="beauty">In the eye of the beholder</li>
+    </condition></template>
+    </category>
+	
+
+
+<category>
+     <pattern>What is *</pattern>
+	  <template>
+	   <think><set name="Place"><star/></set></think>
+	   <condition name= "Place">
+	    <li value= "Bristol">Bristol is a city.</li>
+	    <li value= "London">London is a city.</li>
+	    <li value= "UWE">I do not have an answer for that</li>
+	    <li value= "Beauty">A subjective judgment evoked by an emotional response</li>
+	    </condition>
+	 </template>
+     </category>
+     
+
+<category>
+    <pattern>^ Where is it ^</pattern>
+    <that>Bristol is a city</that>
+    <template>In the South-West of England</template>
+    </category>
+
+<category>
+    <pattern>^ Where is it ^</pattern>
+    <that>London is a city</that>
+    <template>Somewhere east of Bristol</template>
+    </category>
+    
+<category>
+        <pattern>^ Bot please ^</pattern>
+        <template>I do not have an answer for that</template>
+        </category>
+        
+        
+<category>
+        <pattern>^ Is Cardiff in Bristol ^</pattern>
+        <template>I do not have an answer for that</template>
+        </category>
+    
+    
+<category>
+    <pattern>What is the population of * </pattern>
+    <template>
+	   <think><set name="Place"><star/></set></think>
+	   <condition name= "Place">
+	    <li value= "Bristol">The population of Bristol is over 450000</li>
+	    <li value= "London">The population of London is about 8.7 million</li>
+	    <li value= "Cardiff"> The population of Cardiff is over 360000</li>
+	 </condition>
+	 </template>
+     </category>
+     
+     
+     
+<category>
+    <pattern>How many people live in * </pattern>
+    <template>
+	   <think><set name="Place"><star/></set></think>
+	   <condition name= "Place">
+	    <li value= "Bristol">The population of Bristol is over 450000
+</li>
+	  <li value= "Cardiff"> The population of Cardiff is over 360000</li>
+	     <li value= "Keynsham"> I do not know what the population of Keynsham is</li>
+	     <li value= "Space"> I do not know what the population of space is</li>
+	 </condition>
+	 </template>
+     </category>
+     
+     
+<category>
+    <pattern>^ Why not ^</pattern>
+    <that>I do not know what the population of Keynsham is</that>
+    <template>Because it is too hard to count the residents of Keynsham </template>
+    </category>
+    
+<category>
+    <pattern>^ Why not ^</pattern>
+    <that>I do not know what the population of space is</that>
+    <template>Because it is too hard to count the residents of space </template>
+    </category>
+
+<category>
+        <pattern>^ Why not ^</pattern>
+        <template>I do not have an answer for that</template>
+        </category>
+
+<category>
+	<pattern>^ Why not ^</pattern>
+	<that>I DO NOT KNOW WHERE KEYNSHAM IS</that>
+	<template>Because I do not have a category to connect me to a mapping service</template>
+    </category>
+
+
+    
+
+    
+    
+     
+ </aiml>
